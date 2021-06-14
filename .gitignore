@@ -1,0 +1,7 @@
+# files
+*.iml
+gen-classes.txt
+
+# folders
+.idea
+target
