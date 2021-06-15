@@ -13,7 +13,7 @@ public interface CityAnalyzerOptions extends PipelineOptions {
     void setInputFiles(String value);
 
     @Description("Path of the file to write to")
-    @Default.String("src/main/resources/output/result")
+    @Default.String("src/main/resources/output")
     String getOutput();
 
     void setOutput(String value);

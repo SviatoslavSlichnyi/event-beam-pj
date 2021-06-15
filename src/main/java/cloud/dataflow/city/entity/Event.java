@@ -4,10 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.beam.sdk.coders.DefaultCoder;
+import org.apache.beam.sdk.coders.SerializableCoder;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.StringJoiner;
+
+@DefaultCoder(SerializableCoder.class)
 
 @NoArgsConstructor
 @AllArgsConstructor

@@ -15,7 +15,7 @@ public class ReadAvro {
                 PipelineOptionsFactory.fromArgs(args).withValidation().as(CityAnalyzerOptions.class);
         Pipeline p = Pipeline.create(options);
 
-        PCollection<EventStatistic> apply = p.apply(AvroIO.read(EventStatistic.class).from("src/main/resources/output/result-00000-of-00004.avro"));
+        PCollection<EventStatistic> apply = p.apply(AvroIO.read(EventStatistic.class).from("src/main/resources/output/Kyiv-00000-of-00003.avro"));
         apply.apply(ParDo.of(new DoFn<EventStatistic,
                 String>() {
 
